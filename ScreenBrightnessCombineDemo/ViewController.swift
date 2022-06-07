@@ -7,13 +7,28 @@
 
 import UIKit
 
+typealias UIKitScreenBrightnessService = UIKitScreenBrightnessService3
+
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    /// In production code you'd inject the view model into the view controller rather than instantiating it directly as below.
+    private let viewModel: ViewModel = {
+        let notificationPublisher = NotificationCenter.default
+            .publisher(for: UIScreen.brightnessDidChangeNotification)
+            .eraseToAnyPublisher()
+        let screenBrightnessService = UIKitScreenBrightnessService(
+            notificationPublisher: notificationPublisher,
+            screenBrightness: UIScreen.main
+        )
+        return SimpleViewModel(screenBrightnessService: screenBrightnessService)
+    }()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewModel.viewDidAppear()
     }
-
-
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.viewDidDisappear()
+    }
 }
 

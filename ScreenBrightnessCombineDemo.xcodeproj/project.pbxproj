@@ -16,6 +16,11 @@
 		300EE15E284FAD7E009FB908 /* ScreenBrightnessCombineDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EE15D284FAD7E009FB908 /* ScreenBrightnessCombineDemoTests.swift */; };
 		300EE168284FAD7E009FB908 /* ScreenBrightnessCombineDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EE167284FAD7E009FB908 /* ScreenBrightnessCombineDemoUITests.swift */; };
 		300EE16A284FAD7E009FB908 /* ScreenBrightnessCombineDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EE169284FAD7E009FB908 /* ScreenBrightnessCombineDemoUITestsLaunchTests.swift */; };
+		300EE178284FADA2009FB908 /* ScreenBrightnessService1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EE177284FADA2009FB908 /* ScreenBrightnessService1.swift */; };
+		300EE17A284FB642009FB908 /* ScreenBrightnessPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EE179284FB642009FB908 /* ScreenBrightnessPublisher.swift */; };
+		300EE17D284FE3C6009FB908 /* ScreenBrightnessService2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EE17C284FE3C6009FB908 /* ScreenBrightnessService2.swift */; };
+		300EE180284FEDA4009FB908 /* ScreenBrightnessService3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EE17F284FEDA4009FB908 /* ScreenBrightnessService3.swift */; };
+		300EE182284FF93E009FB908 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EE181284FF93E009FB908 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		300EE163284FAD7E009FB908 /* ScreenBrightnessCombineDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenBrightnessCombineDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		300EE167284FAD7E009FB908 /* ScreenBrightnessCombineDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessCombineDemoUITests.swift; sourceTree = "<group>"; };
 		300EE169284FAD7E009FB908 /* ScreenBrightnessCombineDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessCombineDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		300EE177284FADA2009FB908 /* ScreenBrightnessService1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessService1.swift; sourceTree = "<group>"; };
+		300EE179284FB642009FB908 /* ScreenBrightnessPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessPublisher.swift; sourceTree = "<group>"; };
+		300EE17C284FE3C6009FB908 /* ScreenBrightnessService2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessService2.swift; sourceTree = "<group>"; };
+		300EE17F284FEDA4009FB908 /* ScreenBrightnessService3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenBrightnessService3.swift; sourceTree = "<group>"; };
+		300EE181284FF93E009FB908 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +110,16 @@
 			isa = PBXGroup;
 			children = (
 				300EE146284FAD7C009FB908 /* AppDelegate.swift */,
+				300EE14F284FAD7E009FB908 /* Assets.xcassets */,
+				300EE154284FAD7E009FB908 /* Info.plist */,
+				300EE151284FAD7E009FB908 /* LaunchScreen.storyboard */,
+				300EE14C284FAD7C009FB908 /* Main.storyboard */,
 				300EE148284FAD7C009FB908 /* SceneDelegate.swift */,
 				300EE14A284FAD7C009FB908 /* ViewController.swift */,
-				300EE14C284FAD7C009FB908 /* Main.storyboard */,
-				300EE14F284FAD7E009FB908 /* Assets.xcassets */,
-				300EE151284FAD7E009FB908 /* LaunchScreen.storyboard */,
-				300EE154284FAD7E009FB908 /* Info.plist */,
+				300EE181284FF93E009FB908 /* ViewModel.swift */,
+				300EE176284FAD91009FB908 /* Step 1 */,
+				300EE17B284FE3B3009FB908 /* Step 2 */,
+				300EE17E284FED8F009FB908 /* Step 3 */,
 			);
 			path = ScreenBrightnessCombineDemo;
 			sourceTree = "<group>";
@@ -125,6 +139,31 @@
 				300EE169284FAD7E009FB908 /* ScreenBrightnessCombineDemoUITestsLaunchTests.swift */,
 			);
 			path = ScreenBrightnessCombineDemoUITests;
+			sourceTree = "<group>";
+		};
+		300EE176284FAD91009FB908 /* Step 1 */ = {
+			isa = PBXGroup;
+			children = (
+				300EE177284FADA2009FB908 /* ScreenBrightnessService1.swift */,
+				300EE179284FB642009FB908 /* ScreenBrightnessPublisher.swift */,
+			);
+			path = "Step 1";
+			sourceTree = "<group>";
+		};
+		300EE17B284FE3B3009FB908 /* Step 2 */ = {
+			isa = PBXGroup;
+			children = (
+				300EE17C284FE3C6009FB908 /* ScreenBrightnessService2.swift */,
+			);
+			path = "Step 2";
+			sourceTree = "<group>";
+		};
+		300EE17E284FED8F009FB908 /* Step 3 */ = {
+			isa = PBXGroup;
+			children = (
+				300EE17F284FEDA4009FB908 /* ScreenBrightnessService3.swift */,
+			);
+			path = "Step 3";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300EE178284FADA2009FB908 /* ScreenBrightnessService1.swift in Sources */,
+				300EE180284FEDA4009FB908 /* ScreenBrightnessService3.swift in Sources */,
+				300EE17D284FE3C6009FB908 /* ScreenBrightnessService2.swift in Sources */,
+				300EE17A284FB642009FB908 /* ScreenBrightnessPublisher.swift in Sources */,
 				300EE14B284FAD7C009FB908 /* ViewController.swift in Sources */,
 				300EE147284FAD7C009FB908 /* AppDelegate.swift in Sources */,
+				300EE182284FF93E009FB908 /* ViewModel.swift in Sources */,
 				300EE149284FAD7C009FB908 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +493,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rwbutler.screen-brightness.ScreenBrightnessCombineDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rwbutler.screen-brightness.demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -476,7 +520,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rwbutler.screen-brightness.ScreenBrightnessCombineDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rwbutler.screen-brightness.demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
