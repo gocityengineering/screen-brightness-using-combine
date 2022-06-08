@@ -17,7 +17,7 @@ protocol ViewModel {
 
 class SimpleViewModel: ViewModel {
     private var cancellables = Set<AnyCancellable>()
-    private var previousBrightness: Double = -1 // If set to -1 then this property has never been updated.
+    private var previousBrightness: Double?
     private let screenBrightnessService: ScreenBrightnessService
     
     init(screenBrightnessService: ScreenBrightnessService) {
@@ -29,6 +29,9 @@ class SimpleViewModel: ViewModel {
         screenBrightness.filter { brightness in
             brightness != 1.0 // We're not interested in cases where brightness has been set to maximum.
         }
+        .map { brightness -> Double? in
+            brightness // Map to an optional so we can assign to the optional instance variable.
+        }
         .assign(to: \.previousBrightness, on: self)
         .store(in: &cancellables)
     }
@@ -38,6 +41,9 @@ class SimpleViewModel: ViewModel {
     }
 
     func viewDidDisappear() {
+        guard let previousBrightness = previousBrightness else {
+            return
+        }
         screenBrightnessService.set(to: previousBrightness)
     }
 }
